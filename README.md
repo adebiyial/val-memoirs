@@ -1,68 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
 
-## Available Scripts
+This task is designed to provide an opportunity for you to demonstrate general
+frontend and design knowledge in the sense that you:
 
-In the project directory, you can run:
+1. can write clean, structured, readable and maintainable code,
+2. can communicate ideas with good design,
+3. can work with APIs,
+4. are proficient with the React framework.
 
-### `npm start`
+## The Task
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Valentines Day was a couple of weeks ago and several people had awesome memories
+from the day. Your task is to create a fictional site called "Val Memoirs" where
+people can share their experiences with the public.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Requirements
 
-### `npm test`
+The Webpage
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. What it will look like (the UI), is all up to you.
+2. The site should display a slideshow of five(5) awesome images, all of which
+   must be fetched via the Unsplash API using relevant search parameters.
+3. The site should guide people on how to share their stories.
+4. There should be a call-to-action (CTA) to add a story.
+5. The site should display stories that have been shared by people.
+6. The story should have a character limit of 100 and should have a view more
+   button.
+7. Each story should show total number of likes along with a like button.
 
-### `npm run build`
+## Webpage Interactivity using Javascript (React)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. When a user clicks on the CTA to add a story, a form should be presented via
+   a pop-up modal with the following form fields: first name, last name,
+   username, gender, headline and story.
+2. There should be a CTA to save a story.
+3. When the save button is clicked, the story should be added to the list of
+   stories and immediately rendered along with the preloaded (and saved)
+   stories.
+4. You should ensure that no user can post more than one (1) story, using their
+   usernames for validation.
+5. Each story should be likeable unlimited amount of times by anybody.
+6. When the page is reloaded, the stories should be restored to the default
+   amount provided initially.
+7. When the view more button is clicked, the entire details for the story should
+   be presented in a pop-up.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Note:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For implementing the design, you have the liberty to use any UI framework of
+your choice - if you need to. But we’re on the lookout for SCSS.
 
-### `npm run eject`
+## Submission
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The final project should be hosted on Github and deployed on either of Github
+Pages, Heroku or Netlify. Provide the links to the repo as well as the live
+version when you’re done. We encourage you to set up the repo and commit
+properly to it while you work, rather than upload at once when you're done.
