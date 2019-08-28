@@ -9,6 +9,7 @@ import Stories from './components/Stories';
 import './styles/normalize.scss';
 import './styles/index.scss';
 import './styles/common.scss';
+import './styles/mq.scss'; // Media Query
 
 function App() {
   return (
