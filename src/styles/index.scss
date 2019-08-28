@@ -1,0 +1,21 @@
+.App {
+  display: grid;
+  grid-template-columns: [left-gutter] 1fr [content] 12fr [right-gutter] 1fr;
+  grid-template-rows: [global-nav] auto [global-heading] 300px [stories] 1fr [bottom-gutter] 50px;
+}
+
+// For the Navigation bar
+.globalNav {
+  grid-row: global-nav;
+}
+
+// For the Heading section
+.globalHeading {
+  grid-row: global-heading;
+}
+
+// For the Stories section
+.stories {
+  grid-row: stories;
+  opacity: 0;
+}
