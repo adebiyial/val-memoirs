@@ -56,3 +56,37 @@ The final project should be hosted on Github and deployed on either of Github
 Pages, Heroku or Netlify. Provide the links to the repo as well as the live
 version when you’re done. We encourage you to set up the repo and commit
 properly to it while you work, rather than upload at once when you're done.
+
+---
+
+### For my sanity
+
+Home page
+
+1. The site should display stories that have been shared by other people.
+   1. There should be a total of 5 images
+      1. A story has the properties:
+         1. image
+         2. author
+         3. description
+            1. char limit of 100
+            2. a view more button
+               1. when clicked, show details about this story
+         4. total number of likes and a like button
+         5. the likes should increment forever when clicked
+   2. Should also contain a CTA to add a story
+2. When CTA to add a story is clicked, show a form in a modal
+
+   1. Form properties
+      1. First name,
+      2. last name
+      3. username
+      4. gender
+      5. headline
+      6. story
+   2. The form will have a save story button
+   3. When a story is saved, prepend to the list of stories on homepage (and
+      rerender - change state - so it shows up immediately)
+   4. Limit a story to per username (one username, one story)
+
+3. On page reload, go back to Homepage default
