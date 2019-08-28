@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import GlobalNav from './components/GlobalNav';
 import GlobalHeading from './components/GlobalHeading';
-import Stories from './components/Stories';
+// import Stories from './components/Stories';
 
 // Styles
 import './styles/normalize.scss';
@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <GlobalNav />
       <GlobalHeading />
-      <Stories />
+      {/* <Stories /> */}
     </div>
   );
 }
