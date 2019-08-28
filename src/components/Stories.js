@@ -6,7 +6,11 @@ function Stories() {
   return (
     <div className="stories">
       <div className="container">
-        <h1 className="headline">Stories</h1>
+        <div className="storiesContent">
+          <header className="storiesHeader">
+            <h1 className="headline">Stories</h1>
+          </header>
+        </div>
       </div>
     </div>
   );
