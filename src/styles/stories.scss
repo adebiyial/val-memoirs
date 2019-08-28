@@ -7,4 +7,41 @@
     font-size: 50px;
     font-weight: bold;
   }
+
+  // dummy
+  .listOfStories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+
+    .storyHeader,
+    .storyCtaBlock {
+      display: flex;
+      align-items: center;
+    }
+
+    .storyHeader {
+      justify-content: space-between;
+    }
+
+    .storyTitle {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .storyImg {
+      margin: 10px 0;
+    }
+
+    .likeButton {
+      background: transparent;
+      border: beige;
+      font-size: 20px;
+    }
+
+    .story > p {
+      font-size: 15px;
+      color: #020202;
+    }
+  }
 }
