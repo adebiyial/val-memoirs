@@ -6,10 +6,33 @@
 
   .container {
     max-width: 100%;
+    padding: 0 10px;
+  }
+
+  // Global Nav
+  .globalNav {
+    .userAvatar {
+      --dimension: 30px;
+      margin-left: 10px;
+    }
   }
 
   //   Global Heading
   .globalHeading {
+    position: relative;
+
+    &::before {
+      background-color: #616191;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      z-index: -1;
+      border-radius: 5px;
+    }
+
     .headline {
       font-size: 32px;
       line-height: 35px;
@@ -17,8 +40,20 @@
     }
 
     .headlineInfo {
-      font-size: 18px;
+      font-size: 15px;
       line-height: 20px;
+    }
+
+    .headline,
+    .headlineInfo {
+      color: white;
+    }
+  }
+
+  // Stories
+  .stories {
+    .headline {
+      font-size: 32px;
     }
   }
 }
