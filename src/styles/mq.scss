@@ -1,0 +1,24 @@
+@media (max-width: 600px) {
+  // Global
+  .App {
+    grid-template-columns: [left-gutter] 10px [content] 12fr [right-gutter] 10px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  //   Global Heading
+  .globalHeading {
+    .headline {
+      font-size: 32px;
+      line-height: 35px;
+      margin-bottom: 7px;
+    }
+
+    .headlineInfo {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+}
