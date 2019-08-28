@@ -3,7 +3,10 @@ export const uuid = (seed = 100) =>
     .toString(36)
     .substring(2, 2 + seed);
 
-export const characterCount = string => {
-  console.log(string.length)
-  return string.length;
-};
+export const characterCount = string => string.length;
+
+export const isCharacterLimitExceeded = string =>
+  (characterCount(string) > 100 && true) || false;
+
+export const truncateCharacter = string =>
+  isCharacterLimitExceeded(string) && string.slice(0, 100);
