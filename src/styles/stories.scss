@@ -27,7 +27,7 @@
     }
 
     .storyHeader,
-    .likeButtonBlock {
+     {
       display: flex;
       align-items: center;
     }
@@ -63,42 +63,45 @@
       --hearted-opaque--color: #eb575745;
     }
 
-    .likeButtonBlock {
-      cursor: pointer;
-    }
 
     .likeButtonBlock > * {
-      transition: 0.3s;
+      transition: 0.2s;
     }
 
     .likeButton {
       cursor: pointer;
       background: transparent;
       border: beige;
-      font-size: 20px;
-      width: 36px;
-      height: 36px;
-      vertical-align: middle;
-      border-radius: 50%;
+      font-size: 18px;
+      
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .likeIcon {
+      --dimension: 35px;
+      width: var(--dimension);
+      height: var(--dimension);
+      padding: 5px;
+      border-radius: 50%;
       margin-right: 5px;
     }
 
-    .likeButtonBlock:hover .likeButton,
-    .likeButtonBlock:active .likeButton {
+    .likeButton:hover .likeIcon,
+    .likeButton:active .likeIcon{
       background-color: var(--hearted-opaque--color, #eb575745);
     }
 
-    .likeButtonBlock:hover .likeIcon {
+    .likeButton:hover .likeIcon {
       fill: var(--hearted-def-color);
     }
 
-    .likeButtonBlock:hover .noOfLikes {
+    .likeButton:hover .noOfLikes {
       color: var(--hearted-def-color);
     }
-    .story > p {
+
+    .storyDescription {
       font-size: 15px;
       color: #ce7c5b;
       color: #132132;
