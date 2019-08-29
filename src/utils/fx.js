@@ -1,3 +1,4 @@
+import axios from 'axios';
 export const uuid = (seed = 100) =>
   Math.random()
     .toString(36)
@@ -10,3 +11,7 @@ export const isCharacterLimitExceeded = (string, limit) =>
 
 export const truncateCharacter = (string, from = 0, to = 0) =>
   isCharacterLimitExceeded(string, to) && string.slice(from, to);
+
+export const BaseUrl = axios.create({
+  baseURL: `https://api.unsplash.com/photos/search`,
+});
