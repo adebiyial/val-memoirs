@@ -21,6 +21,10 @@
   .globalHeading {
     position: relative;
 
+    &::before {
+      border-radius: 0;
+    }
+
     .headline {
       font-size: 32px;
       line-height: 35px;
