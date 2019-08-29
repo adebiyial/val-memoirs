@@ -1,0 +1,25 @@
+.newStoryBlock {
+  .newStoryCTABlock {
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .newStoryBtn {
+    font-size: 49px;
+    background-color: #38bd86;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    --dimension: 70px;
+    width: var(--dimension);
+    height: var(--dimension);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+      0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  }
+}
