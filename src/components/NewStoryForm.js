@@ -1,25 +1,31 @@
 import React from 'react';
 import Modal from './Modal';
+import { useStoryDispatch } from '../contexts/StoryContext';
 import '../styles/newstoryform.scss';
+import {getPhoto} from '../client/calls';
 
 function NewStoryForm({ isModalActive, showModal, hideModal }) {
-  const storyDetails = {
+  const [story, setStory] = React.useState({
     firstname: '',
     lastname: '',
     username: '',
     gender: '',
     headline: '',
-    story: '',
-  };
-
-  const [story, setStory] = React.useState(storyDetails);
+    description: '',
+    noOfLikes: 0,
+    image: '',
+  });
+  const dispatch = useStoryDispatch();
 
   function handleChange(e) {
     setStory({ ...story, [e.target.name]: e.target.value });
   }
 
-  function addNewStory() {
-    console.log(story);
+  async function addNewStory() {
+    const photo = await getPhoto();
+    console.log(photo[0])
+    dispatch({ type: 'addStory', payload: { ...story, image: photo[0]} });
+    hideModal();
   }
 
   return (
@@ -114,7 +120,7 @@ function NewStoryForm({ isModalActive, showModal, hideModal }) {
                 <textarea
                   className="formFieldInput"
                   id=""
-                  name="story"
+                  name="description"
                   rows="5"
                   cols="33"
                   placeholder="It's not much of a life filled event"
