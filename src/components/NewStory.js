@@ -4,7 +4,7 @@ import '../styles/newstory.scss';
 import NewStoryForm from './NewStoryForm';
 
 function NewStory() {
-  const [isModalActive, setIsModalActive] = React.useState(true);
+  const [isModalActive, setIsModalActive] = React.useState(false);
 
   function showModal() {
     setIsModalActive(true);
