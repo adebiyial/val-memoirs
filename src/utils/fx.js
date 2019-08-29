@@ -5,8 +5,8 @@ export const uuid = (seed = 100) =>
 
 export const characterCount = string => string.length;
 
-export const isCharacterLimitExceeded = string =>
-  (characterCount(string) > 100 && true) || false;
+export const isCharacterLimitExceeded = (string, limit) =>
+  (characterCount(string) > limit && true) || false;
 
-export const truncateCharacter = string =>
-  isCharacterLimitExceeded(string) && string.slice(0, 100);
+export const truncateCharacter = (string, from = 0, to = 0) =>
+  isCharacterLimitExceeded(string, to) && string.slice(from, to);
