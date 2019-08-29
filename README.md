@@ -20,13 +20,13 @@ The Webpage
 
 1. What it will look like (the UI), is all up to you.
 2. The site should display a slideshow of five(5) awesome images, all of which
-   must be fetched via the Unsplash API using relevant search parameters.
-3. The site should guide people on how to share their stories.
+   must be fetched via the Unsplash API using relevant search parameters. ❎
+3. The site should guide people on how to share their stories. ❎
 4. There should be a call-to-action (CTA) to add a story.
-5. The site should display stories that have been shared by people.
+5. The site should display stories that have been shared by people. ✅
 6. The story should have a character limit of 100 and should have a view more
-   button.
-7. Each story should show total number of likes along with a like button.
+   button. ✅
+7. Each story should show total number of likes along with a like button. - ✅
 
 ## Webpage Interactivity using Javascript (React)
 
