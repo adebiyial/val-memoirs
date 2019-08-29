@@ -1,24 +1,23 @@
 import React from 'react';
-
-// Components
-import GlobalNav from './components/GlobalNav';
 import GlobalHeading from './components/GlobalHeading';
-import Stories from './components/Stories';
-
-// Styles
-import './styles/normalize.scss';
-import './styles/index.scss';
-import './styles/common.scss';
-import './styles/mq.scss'; // Media Query
+import GlobalNav from './components/GlobalNav';
 import NewStory from './components/NewStory';
+import Stories from './components/Stories';
+import AppProviders from './contexts/index';
+import './styles/common.scss';
+import './styles/index.scss';
+import './styles/mq.scss';
+import './styles/normalize.scss';
 
 function App() {
   return (
     <div className="App">
-      <GlobalNav />
-      <GlobalHeading />
-      <Stories />
-      <NewStory />
+      <AppProviders>
+        <GlobalNav />
+        <GlobalHeading />
+        <Stories />
+        <NewStory />
+      </AppProviders>
     </div>
   );
 }
