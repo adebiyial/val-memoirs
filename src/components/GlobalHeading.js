@@ -1,6 +1,4 @@
 import React from 'react';
-
-// Styles
 import '../styles/globalheading.scss';
 
 function GlobalHeading() {
