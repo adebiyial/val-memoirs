@@ -1,24 +1,43 @@
 import React from 'react';
-import { isCharacterLimitExceeded, truncateCharacter, uuid } from '../utils/fx';
-import STORIES from '../utils/_dummydata';
+import { useStoryState, useStoryDispatch } from '../contexts/StoryContext';
+import {
+  isCharacterLimitExceeded,
+  truncateCharacter,
+  uuid,
+} from '../utils/fx';
+import { getPhotos } from '../client/calls';
 
 function Story() {
-  const [stories, setStories] = React.useState(STORIES);
+  const stories = useStoryState();
+  const dispatch = useStoryDispatch();
 
-  function incrementStoryLikes(username, storyIndex) {
-    let defaultStories = stories;
+  React.useEffect(() => {
+    async function normalizeStories() {
+      const photos = await getPhotos();
 
-    defaultStories = [
-      ...defaultStories.slice(0, storyIndex),
-      {
-        ...defaultStories[storyIndex],
-        noOfLikes: defaultStories[storyIndex].noOfLikes + 1,
-      },
-      ...defaultStories.slice(storyIndex + 1),
-    ];
+      // Replace images from dummy with actual unsplash photos
+      const storiesWithUnsplashImages = stories.map((story, index) => {
+        story.image = photos[index];
+        return story;
+      });
 
-    setStories([...defaultStories]);
+      // Replace global stories
+      dispatch({
+        type: 'replaceDummyStories',
+        payload: storiesWithUnsplashImages,
+      });
+    }
+
+    normalizeStories();
+  }, []);
+
+  function incrementLikes(username, index) {
+    dispatch({
+      type: 'incrementLikes',
+      payload: stories.find(story => story.username === username),
+    });
   }
+
 
   return (
     <>
@@ -39,7 +58,7 @@ function Story() {
                         <button
                           type="submit"
                           className="likeButton"
-                          onClick={() => incrementStoryLikes(username, index)}
+                          onClick={() => incrementLikes(username, index)}
                         >
                           <svg viewBox="0 0 24 24" className="likeIcon">
                             <g>
