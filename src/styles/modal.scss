@@ -1,0 +1,37 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: rgba(125, 126, 129, 0.84);
+  transform: translateY(50%);
+
+  .modal-main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.modal-isActive {
+    opacity: 1;
+    z-index: 2;
+    animation: show 0.2s cubic-bezier(0.25, 0, 0.35, 1) alternate forwards;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
