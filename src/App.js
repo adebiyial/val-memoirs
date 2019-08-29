@@ -10,6 +10,7 @@ import './styles/normalize.scss';
 import './styles/index.scss';
 import './styles/common.scss';
 import './styles/mq.scss'; // Media Query
+import NewStory from './components/NewStory';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <GlobalNav />
       <GlobalHeading />
       <Stories />
+      <NewStory />
     </div>
   );
 }
