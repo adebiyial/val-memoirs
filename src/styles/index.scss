@@ -18,3 +18,9 @@
 .stories {
   grid-row: stories;
 }
+
+// For body when modal shows up
+.fixed-body {
+  position: fixed;
+  width: 100%;
+}
