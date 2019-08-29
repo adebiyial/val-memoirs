@@ -1,8 +1,6 @@
 import React from 'react';
-import Story from './Story';
-
 import '../styles/stories.scss';
-
+import Story from './Story';
 
 function Stories() {
   return (
